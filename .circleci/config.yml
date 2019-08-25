@@ -39,8 +39,8 @@ jobs:
       - run:
           name: Configure Git
           command: |
-            git config --global user.name "StackStorm Exchange"
-            git config --global user.email "info@stackstorm.com"
+            git config --global user.name "JP Bourget"
+            git config --global user.email "jp@syncurity.net"
       - run:
           name: Deploy updated site
           command: gh-pages --message "[skip ci] Website updates" --dist docs
