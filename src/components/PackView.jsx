@@ -192,7 +192,7 @@ const PackView = React.createClass({
       html: true,
     });
     $.ajax({
-      url: 'https://index.stackstorm.org/v1/index.json',
+      url: 'https://github.com/syncurity-exchange/index/blob/master/v1/index.json',
       dataType: 'json',
       cache: false,
       success: function (data) {
