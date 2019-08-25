@@ -13,22 +13,24 @@ const Pack = React.createClass({
   copyCommand(e) {
     const target = $(e.target).closest('a');
     target.addClass('copied').tooltip('hide');
-    setTimeout((() => { target.removeClass('copied'); }), 1000);
+    setTimeout((() => {
+      target.removeClass('copied'); 
+    }), 1000);
   },
   render() {
     // If no explicit version is specified, we assume it only works with Python 2.x
-    var supported_python_versions = [];
-    var supported_python_versions_string;
+    const supported_python_versions = [];
+    let supported_python_versions_string;
 
     if (!this.props.python_versions || this.props.python_versions.length === 0) {
       supported_python_versions_string = 'Python 2.x';
     }
     else {
       if (this.props.python_versions.indexOf('2') > -1) {
-        supported_python_versions.push('Python 2.x')
+        supported_python_versions.push('Python 2.x');
       }
       if (this.props.python_versions.indexOf('3') > -1) {
-        supported_python_versions.push('Python 3.x')
+        supported_python_versions.push('Python 3.x');
       }
 
       supported_python_versions_string = supported_python_versions.join(', ');
@@ -47,7 +49,8 @@ const Pack = React.createClass({
             data-title="View source code on Github"
             data-placement="bottom"
             data-toggle="tooltip"
-          ><i className="fa fa-github" /></a>
+          ><i className="fa fa-github" />
+          </a>
           <a
             rel="button" tabIndex="-1" className="btn btn-sm btn-copy"
             data-clipboard-text={`st2 pack install ${this.props.slug}`}
@@ -56,14 +59,16 @@ const Pack = React.createClass({
             data-placement="bottom"
             data-toggle="tooltip"
             onClick={this.copyCommand}
-            ><i className="fa fa-paste" /></a>
+          ><i className="fa fa-paste" />
+          </a>
           <a
-            className="btn btn-sm btn-circleci" href={`https://circleci.com/gh/StackStorm-Exchange/stackstorm-${this.props.slug}`}
+            className="btn btn-sm btn-circleci" href={`https://circleci.com/gh/syncurity-exchange/${this.props.slug}`}
             rel="noopener noreferrer" target="_blank"
             data-title="View build status on Circle CI"
             data-placement="bottom"
             data-toggle="tooltip"
-          ><i className="fa fa-cogs" /></a>
+          ><i className="fa fa-cogs" />
+          </a>
         </div>
         <div className="card-block description">
           {this.props.children}
@@ -80,7 +85,7 @@ const Pack = React.createClass({
             <div className="author">{this.props.author}</div>
           </div>
           <div className="row">
-          <div className="python_versions">
+            <div className="python_versions">
               Supported Python versions: { supported_python_versions_string }
             </div>
           </div>
@@ -111,7 +116,7 @@ const PackKeywords = React.createClass({
 const PackIcon = React.createClass({
   getInitialState() {
     return {
-      image_url: `https://index.stackstorm.org/v1/icons/${this.props.name}.png`,
+      image_url: `https://index.syncurity.net/v1/icons/${this.props.name}.png`,
     };
   },
   useDefault() {
@@ -172,7 +177,8 @@ const PackView = React.createClass({
   categoryToggle(e) {
     if (this.state.category === e.target.dataset.category) {
       this.setState({ category: '-1' });
-    } else {
+    }
+    else {
       this.setState({ category: e.target.dataset.category });
     }
   },
@@ -199,8 +205,12 @@ const PackView = React.createClass({
         const packs = Object.keys(data.packs).map(key => data.packs[key]).sort((a, b) => {
           const ln = a.name.toLowerCase();
           const rn = b.name.toLowerCase();
-          if (ln < rn) { return -1; }
-          if (ln > rn) { return 1; }
+          if (ln < rn) {
+            return -1; 
+          }
+          if (ln > rn) {
+            return 1; 
+          }
           return 0;
         });
         this.setState({ packs });
@@ -272,7 +282,9 @@ const PackView = React.createClass({
               <div className="search-block filter-input-block col-md-2">
                 <input
                   id="pack-query" className="form-control"
-                  type="text" placeholder="Search" ref={(c) => { this.queryInput = c; }}
+                  type="text" placeholder="Search" ref={(c) => {
+                    this.queryInput = c; 
+                  }}
                   onChange={this.handleQueryChange}
                 />
                 <i className="fa fa-search" />
