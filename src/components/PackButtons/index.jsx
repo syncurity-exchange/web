@@ -11,7 +11,7 @@ const sharedSettings = {
 const CreatePopup = () => (
   <div className="create-popup">
     <p>Want to create a StackStorm pack? Great!
-      Here{"'"}s a few steps to get started:
+      Here{'\''}s a few steps to get started:
     </p>
     <ol>
       <li>
@@ -45,7 +45,8 @@ const CreatePopup = () => (
         {' '}<a
           target="_blank" rel="noopener noreferrer"
           href="https://github.com/StackStorm-Exchange/exchange-template"
-        >pack template on GitHub</a>{' '}
+        >pack template on GitHub
+        </a>{' '}
         as a structure reference.
       </li>
     </ol>
@@ -57,13 +58,15 @@ const CreatePopup = () => (
         target="_blank" rel="noopener noreferrer"
         href="https://docs.stackstorm.com/packs.html"
         className="btn btn-primary"
-      >Read the pack documentation</a>
+      >Read the pack documentation
+      </a>
     </div>
     <div className="iamnew">
       <h5>But I am completely new to this!</h5>
-      <p>Fine with us! StackStorm doesn{"'"}t require you to be a 100x ninja wizard unicorn programmer.
+      <p>Fine with us! StackStorm doesn{'\''}t require you to be a 100x ninja wizard unicorn programmer.
       Know a thing or two about DevOps and
-        {' '}maybe automation? That{"'"}s it. Now it only depends on how far you want to go.</p>
+      {' '}maybe automation? That{'\''}s it. Now it only depends on how far you want to go.
+      </p>
       <ul>
         <li><strong>Use packs from Exchange, create rules:</strong>{' '}
           basic Git and Linux terminal knowledge.
@@ -71,14 +74,16 @@ const CreatePopup = () => (
           {' '}<a
             target="_blank" rel="noopener noreferrer"
             href="https://github.com/StackStorm-Exchange/stackstorm-email/blob/master/rules/sample.emailsample.yaml"
-          >sample.emailsample.yaml</a>.
+          >sample.emailsample.yaml
+          </a>.
         </li>
         <li><strong>Run commands on remote servers:</strong>{' '}
       some shell scripting skills. Create
           {' '}<a
             target="_blank" rel="noopener noreferrer"
             href="https://github.com/StackStorm/st2/tree/master/contrib/hello_st2/actions"
-          >shell actions</a>{' '}
+          >shell actions
+          </a>{' '}
         and use
           {' '}<a
             target="_blank" rel="noopener noreferrer"
@@ -93,7 +98,8 @@ const CreatePopup = () => (
           {' '}<a
             target="_blank" rel="noopener noreferrer"
             href="https://docs.stackstorm.com/workflows.html"
-          >Workflows</a>{' '}
+          >Workflows
+          </a>{' '}
         are a powerful way to connect various actions across different packs.
         </li>
         <li><strong>Create anything:</strong>{' '}
@@ -101,12 +107,14 @@ const CreatePopup = () => (
           {' '}<a
             target="_blank" rel="noopener noreferrer"
             href="https://github.com/StackStorm-Exchange/stackstorm-trello/tree/master/actions"
-          >use a Python module</a>{' '}
+          >use a Python module
+          </a>{' '}
           or
           {' '}<a
             target="_blank" rel="noopener noreferrer"
             href="https://github.com/StackStorm-Exchange/stackstorm-github/tree/master/actions"
-          >connect to API</a>. We{"'"}ll gladly accept it to the Exchange, too!
+          >connect to API
+          </a>. We{'\''}ll gladly accept it to the Exchange, too!
         </li>
       </ul>
     </div>
@@ -117,9 +125,11 @@ const CreatePopup = () => (
 const SubmitPopup = () => (
   <div className="submit-popup">
     <p>We welcome all contributions to StackStorm Exchange! If your pack might be useful
-    to more people than just yourself, we would be happy to feature it.</p>
-    <p>Don{"'"}t worry if your code isn{"'"}t perfect or the pack is incomplete—we{"'"}ll figure things
-    out or find someone else who  might want to jump in and help. </p>
+    to more people than just yourself, we would be happy to feature it.
+    </p>
+    <p>Don{'\''}t worry if your code isn{'\''}t perfect or the pack is incomplete—we{'\''}ll figure things
+    out or find someone else who  might want to jump in and help. 
+    </p>
     <p>To submit a pack, just send a pull request to our incubator repository on GitHub:</p>
 
     <div className="docs-button-wrap">
@@ -127,11 +137,13 @@ const SubmitPopup = () => (
         target="_blank" rel="noopener noreferrer"
         href="https://github.com/StackStorm-Exchange/exchange-incubator"
         className="btn btn-primary"
-      ><i className="fa fa-github" /> StackStorm-Exchange/exchange-incubator</a>
+      ><i className="fa fa-github" /> StackStorm-Exchange/exchange-incubator
+      </a>
     </div>
 
-    <p className="final">We{"'"}ll do our best to get in touch within a couple of days, and most of the time it{"'"}s much
-    sooner. We work with open source, after all—we can sense user contributions.</p>
+    <p className="final">We{'\''}ll do our best to get in touch within a couple of days, and most of the time it{'\''}s much
+    sooner. We work with open source, after all—we can sense user contributions.
+    </p>
   </div>
 );
 
@@ -140,11 +152,16 @@ export const CreateButton = () => {
     title: 'Getting started with packs',
     content: <CreatePopup />,
   }, sharedSettings));
-  return (<button
-    type="button"
-    className="pack-create btn btn-secondary"
-    onClick={() => { Popup.queue(popup); }}
-  >How to create</button>);
+  return (
+    <button
+      type="button"
+      className="pack-create btn btn-secondary"
+      onClick={() => {
+        Popup.queue(popup); 
+      }}
+    >How to create
+    </button>
+  );
 };
 
 export const SubmitButton = () => {
@@ -152,9 +169,14 @@ export const SubmitButton = () => {
     title: 'Submit a pack',
     content: <SubmitPopup />,
   }, sharedSettings));
-  return (<button
-    type="button"
-    className="pack-submit btn btn-primary"
-    onClick={() => { Popup.queue(popup); }}
-  >Submit a pack</button>);
+  return (
+    <button
+      type="button"
+      className="pack-submit btn btn-primary"
+      onClick={() => {
+        Popup.queue(popup); 
+      }}
+    >Submit a pack
+    </button>
+  );
 };

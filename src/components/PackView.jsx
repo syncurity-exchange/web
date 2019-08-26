@@ -198,7 +198,7 @@ const PackView = React.createClass({
       html: true,
     });
     $.ajax({
-      url: 'https://github.com/syncurity-exchange/index/blob/master/v1/index.json',
+      url: 'https://index.syncurity.net/v1/index.json',
       dataType: 'json',
       cache: false,
       success: function (data) {

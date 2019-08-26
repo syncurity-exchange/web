@@ -3,7 +3,7 @@ import './index.scss';
 
 const freakOut = true;
 const wiggleBoxes = false;
-const LABELS = ['none', 'none', 'solid', 'up', 'up'];
+const LABELS = [ 'none', 'none', 'solid', 'up', 'up' ];
 
 const random = (maximum, minimum = 0) =>
   Math.floor(Math.random() * ((maximum - minimum) + 1)) + minimum;

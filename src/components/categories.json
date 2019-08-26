@@ -3,7 +3,7 @@
 		"id": "picks",
 		"displayName": "Staff Picks",
 		"packs": [
-			"Network Essentials",
+			"alienvault_central",
 			"aws",
 			"github",
 			"ansible",
@@ -27,32 +27,24 @@
 	},
 	{
 		"id": "monitoring",
-		"displayName": "Monitoring",
+		"displayName": "Alerting",
 		"packs": [
-			"Network Essentials",
-			"datadog",
-			"dripstat",
-			"nagios",
-			"sensu",
-			"servicenow",
-			"newrelic",
-			"mmonit",
-			"icinga2",
-			"Check_MK"
+			"alienvault_central",
+			"cb_defense"
 		]
 	},
 	{
-		"id": "curiosities",
-		"displayName": "Curiosities",
+		"id": "intel",
+		"displayName": "Intel",
 		"packs": [
-			"astral",
-			"cubesensors",
-			"hue",
-			"tesla",
-			"nest",
-			"powerpoint",
-			"urbandict",
-			"save_kittens"
+			"crowdstrike_intel"
+		]
+	},
+	{
+		"id": "sandbox",
+		"displayName": "Sandbox",
+		"packs": [
+			"joe_sandbox"
 		]
 	}
 ]

@@ -45,3 +45,7 @@ jspm_packages
 
 # macOS
 .DS_Store
+
+.idea
+*.iml
+/.idea/
