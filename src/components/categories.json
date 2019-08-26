@@ -1,32 +1,6 @@
 [
 	{
-		"id": "picks",
-		"displayName": "Staff Picks",
-		"packs": [
-			"alienvault_central",
-			"aws",
-			"github",
-			"ansible",
-			"duo",
-			"datadog",
-			"sensu",
-			"hue"
-		]
-	},
-	{
-		"id": "cloud",
-		"displayName": "Cloud Providers",
-		"packs": [
-			"aws",
-			"libcloud",
-			"digitalocean",
-			"rackspace",
-			"azure",
-			"dimensiondata"
-		]
-	},
-	{
-		"id": "monitoring",
+		"id": "alerting",
 		"displayName": "Alerting",
 		"packs": [
 			"alienvault_central",
