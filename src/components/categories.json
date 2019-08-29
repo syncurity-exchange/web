@@ -4,7 +4,7 @@
 		"displayName": "Alerting",
 		"packs": [
 			"alienvault_central",
-			"cb_defense"
+			"carbonblack_defense"
 		]
 	},
 	{

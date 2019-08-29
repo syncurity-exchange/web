@@ -76,4 +76,5 @@ jspm_packages
 .idea/**/gradle.xml
 .idea/**/libraries
 
+.idea
 

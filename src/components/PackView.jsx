@@ -62,7 +62,7 @@ const Pack = React.createClass({
           ><i className="fa fa-paste" />
           </a>
           <a
-            className="btn btn-sm btn-circleci" href={`https://circleci.com/gh/syncurity-exchange/${this.props.slug}`}
+            className="btn btn-sm btn-circleci" href={`https://circleci.com/gh/syncurity-exchange/syncurity-${this.props.slug}`}
             rel="noopener noreferrer" target="_blank"
             data-title="View build status on Circle CI"
             data-placement="bottom"
