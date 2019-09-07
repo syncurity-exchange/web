@@ -124,7 +124,7 @@ const CreatePopup = () => (
 
 const SubmitPopup = () => (
   <div className="submit-popup">
-    <p>We welcome all contributions to StackStorm Exchange! If your pack might be useful
+    <p>We welcome all contributions to Syncurity Exchange! If your pack might be useful
     to more people than just yourself, we would be happy to feature it.
     </p>
     <p>Don{'\''}t worry if your code isn{'\''}t perfect or the pack is incomplete—we{'\''}ll figure things
@@ -135,9 +135,9 @@ const SubmitPopup = () => (
     <div className="docs-button-wrap">
       <a
         target="_blank" rel="noopener noreferrer"
-        href="https://github.com/StackStorm-Exchange/exchange-incubator"
+        href="https://github.com/syncurity-exchange/exchange-incubator"
         className="btn btn-primary"
-      ><i className="fa fa-github" /> StackStorm-Exchange/exchange-incubator
+      ><i className="fa fa-github" /> syncurity-exchange/exchange-incubator
       </a>
     </div>
 
